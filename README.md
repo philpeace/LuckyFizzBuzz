@@ -10,3 +10,7 @@ All releases can be found at: https://github.com/philpeace/LuckyFizzBuzz/release
 
 https://github.com/philpeace/LuckyFizzBuzz/releases/tag/v1
 
+### Release 2 (Step 2)
+
+https://github.com/philpeace/LuckyFizzBuzz/releases/tag/v2
+
