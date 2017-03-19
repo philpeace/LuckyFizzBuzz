@@ -14,3 +14,7 @@ https://github.com/philpeace/LuckyFizzBuzz/releases/tag/v1
 
 https://github.com/philpeace/LuckyFizzBuzz/releases/tag/v2
 
+### Release 3 (Step 3)
+
+https://github.com/philpeace/LuckyFizzBuzz/releases/tag/v3
+

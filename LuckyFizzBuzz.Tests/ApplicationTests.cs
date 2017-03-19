@@ -29,7 +29,23 @@ namespace LuckyFizzBuzz.Tests
 
             var actual = app.Run(input);
 
-            Assert.Equal(expected, actual);
+            Assert.Equal(expected, actual.Substring(0, actual.IndexOf('\n')));
+        }
+
+        [Theory]
+        [InlineData("1", "fizz: 0\nbuzz: 0\nfizzbuzz: 0\nlucky: 0\ninteger: 1")]
+        [InlineData("1 2", "fizz: 0\nbuzz: 0\nfizzbuzz: 0\nlucky: 0\ninteger: 2")]
+        [InlineData("1 2 3", "fizz: 0\nbuzz: 0\nfizzbuzz: 0\nlucky: 1\ninteger: 2")]
+        [InlineData("1 2 6 18", "fizz: 2\nbuzz: 0\nfizzbuzz: 0\nlucky: 0\ninteger: 2")]
+        [InlineData("1 2 3 4 5", "fizz: 0\nbuzz: 1\nfizzbuzz: 0\nlucky: 1\ninteger: 3")]
+        [InlineData("1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20", "fizz: 4\nbuzz: 3\nfizzbuzz: 1\nlucky: 2\ninteger: 10")]
+        public void ApplicationRunReturnsCorrectReport(string input, string expected)
+        {
+            var app = new Application();
+
+            var actual = app.Run(input);
+
+            Assert.Equal(expected, actual.Substring(actual.IndexOf('\n') + 1));
         }
     }
 }
